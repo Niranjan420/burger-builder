@@ -17,7 +17,7 @@ export default function BuildControls(props) {
         <BuildControl key={control.label} label={control.label} added={() => props.ingredientAdded(control.type)} removed={() => props.ingredientRemoved(control.type)}
           disabled={props.disabled[control.type]} />
       ))}
-      <button disabled={!props.purchaseable} className={classes.OrderButton}>Order Now</button>
+      <button disabled={!props.purchaseable} className={classes.OrderButton} onClick={props.ordered}>Order Now</button>
     </div>
   )
 }
